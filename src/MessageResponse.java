@@ -25,6 +25,12 @@ public class MessageResponse extends ListenerAdapter {
 
             event.getTextChannel().sendMessage(response).queue();
         }
+        if(message.startsWith(".roll")) {
+            Random rand = new Random();
+            int rng = rand.nextInt(7 - 1) + 1;
+            String response = event.getAuthor().getName() + ", you rolled a " + rng;
 
+            event.getTextChannel().sendMessage(response).queue();
+        }
     }
 }
