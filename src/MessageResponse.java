@@ -16,7 +16,7 @@ public class MessageResponse extends ListenerAdapter {
             String name = event.getAuthor().getName();
             String response = name + ", hello and welcome to the Discord Server!";
 
-            event.getTextChannel().sendMessage(response).queue();
+            event.getTextChannel().sendMessage(response).queue();//produces message in discord. (.queue) is always needed
         }
         if(message.startsWith(".rng")) {
             Random rand = new Random();
